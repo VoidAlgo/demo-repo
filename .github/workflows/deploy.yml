@@ -1,0 +1,10 @@
+# Planted by Last Day's demo setup: only one person can run this deploy.
+name: Deploy
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    if: github.actor == 'fatbatman85'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Demo deploy of demo-repo; nothing is deployed."
